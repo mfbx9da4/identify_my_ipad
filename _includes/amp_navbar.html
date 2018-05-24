@@ -2,31 +2,20 @@
 <header class="ampstart-headerbar fixed flex justify-start items-center top-0 left-0 right-0 pl2 pr4">
   <div role="button" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger md-hide lg-hide pr2">☰</div>
 
-  <amp-img src="/assets/images/logo.png" width="20" height="33" layout="fixed" class="my0 mx-auto" alt="Example logo image"></amp-img>&nbsp;&nbsp;&nbsp;<header class="sm-hide xs-hide"><strong>Identify My iPad</strong></header>
+  <a class="my0 mx-auto flex brand" href="/">
+    <amp-img src="/assets/images/logo.png" width="20" height="33" layout="fixed" class="my0 mx-auto" alt="Example logo image"></amp-img>&nbsp;&nbsp;&nbsp;<header class="sm-hide xs-hide"><strong>Identify My iPad</strong></header>
+  </a>
 
   <nav class="ampstart-headerbar-nav ampstart-nav xs-hide sm-hide">
     <ul class="list-reset center m0 p0 flex nowrap">
 
-      <!-- Start Dropdown -->
-      <li class="ampstart-nav-item ampstart-nav-dropdown relative">
-        <amp-accordion layout="container" disable-session-states="" class="ampstart-dropdown absolute top-0 left-0 right-0 bottom-0">
-        <section>
-          <header>By Model</header>
-          <ul class="ampstart-dropdown-items list-reset m0 p0">
-              <li class="ampstart-dropdown-item">
-                <a href="#" class="text-decoration-none">Styling Tips</a>
-              </li>
-              <li class="ampstart-dropdown-item">
-                <a href="#" class="text-decoration-none">Designers</a>
-              </li>
-          </ul>
-        </section>
-        </amp-accordion>
+      <li class="ampstart-nav-item ">
+        <a href="/" class="text-decoration-none block">By Model</a>
       </li>
-      <!-- End Dropdown -->
+
 
       <li class="ampstart-nav-item ">
-        <a href="#" class="text-decoration-none block">About</a>
+        <a href="/about" class="text-decoration-none block">About</a>
       </li>
 
     </ul>
@@ -47,8 +36,11 @@
           <section>
             <header>By Model</header>
             <ul class="ampstart-dropdown-items list-reset m0 p0">
-                <li class="ampstart-dropdown-item"><a href="#" class="text-decoration-none">Styling Tips</a></li>
-                <li class="ampstart-dropdown-item"><a href="#" class="text-decoration-none">Designers</a></li>
+        	  {% for my_page in site.pages %}
+        	    {% if my_page.code %}
+        	    <li data-model-code="{{ my_page.code }}" class="ampstart-dropdown-item"><a href="{{ my_page.url | prepend: site.baseurl }}" class="text-decoration-none">{{ my_page.code }}</a></li>
+        	    {% endif %}
+        	  {% endfor %}
             </ul>
           </section>
         </amp-accordion>
