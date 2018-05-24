@@ -1,0 +1,12 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <ul class="">
+      {% for my_page in site.pages %}
+        | <li data-model-code="{{ my_page.code }}" style="display: inline-block;"><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+</footer>
