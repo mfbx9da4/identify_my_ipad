@@ -22,7 +22,7 @@ function genTemplate (options) {
 	return `---
 layout: page
 title: ${options.code} - ${options.name}
-permalink: /${options.code}/
+permalink: /ipads/iPad-${options.code}/
 model_name: ${options.name}
 aka: ${options.aka}
 code: ${options.code}
