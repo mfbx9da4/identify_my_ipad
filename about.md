@@ -1,5 +1,6 @@
 ---
 layout: amp
+permalink: /about
 ---
 <div class="container py2">
 	<h1>About</h1>
