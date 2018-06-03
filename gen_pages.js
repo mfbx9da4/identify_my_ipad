@@ -28,6 +28,7 @@ description: ${options.description}
 aka: ${options.aka}
 code: ${options.code}
 sim: ${options.sim}
+keywords: "${options.name}, ${options.code}, ${options.aka}"
 ---
 `
 }

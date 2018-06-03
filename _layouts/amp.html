@@ -1,15 +1,26 @@
+---
+layout: compress
+---
 <!doctype html>
 <html ⚡ lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>{{page.title}}</title>
     <meta name="description" content="{{page.description}}">
+    <meta name="title" content="{{page.title}}" />
+    <meta name="keywords" content="{{page.keywords}}" />
+    <meta property="og:title" content="{{page.title}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:site_name" content="Identify My iPad" />
+    <!-- <meta property="og:url" content="http://www.imdb.com/title/tt0117500/" /> -->
+    <!-- <meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" /> -->
 
-    <!-- TODO: verify this is correct -->
     <link rel="canonical" href="{{site.url}}{{page.url}}">
 
     {% include favicon.html %}
 
-    <title>{{page.title}}</title>
 
     <script async src="https://cdn.ampproject.org/v0.js"></script>
 
