@@ -24,6 +24,7 @@ layout: page
 title: ${options.code} - ${options.name}
 permalink: /ipads/iPad-${options.code}/
 model_name: ${options.name}
+description: Official identity of ${options.code} - ${options.name} ${options.aka}. 3 Best compatible iPad cases for ${options.name}. 3 Best compatible iPad pens for ${options.name}. 3 Best compatible iPad chargers for ${options.name}. 3 Best compatible keyboards for ${options.name}.
 aka: ${options.aka}
 code: ${options.code}
 sim: ${options.sim}
