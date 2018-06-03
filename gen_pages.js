@@ -100,7 +100,7 @@ async function main () {
         sitemap += buildSitemapUrl(options.permalink, priority, lastmod)
 	}
 
-    await writeFile('sitemap2.xml', buildSitemap(sitemap))
+    await writeFile('sitemap.xml', buildSitemap(sitemap))
 }
 
 
