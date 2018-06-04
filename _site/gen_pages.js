@@ -24,11 +24,12 @@ layout: page
 title: ${options.code} - ${options.name}
 permalink: ${options.permalink}
 model_name: ${options.name}
-description: ${options.description}
+description: "${options.description}"
 aka: ${options.aka}
 code: ${options.code}
-sim: ${options.sim}
-keywords: "${options.name}, ${options.code}, ${options.aka}"
+date: ${options.lastmod}
+sim: ${options.sim || ''}
+keywords: "${options.name}, ${options.code}${options.aka ? ', ' + options.aka : ''}"
 ---
 `
 }
@@ -84,16 +85,17 @@ function defaultSitemapUrls () {
   </url>`
 }
 async function main () {
-    let sitemap = defaultSitemapUrls()
-    const lastmod = (new Date()).toISOString()
+  let sitemap = defaultSitemapUrls()
+  const lastmod = (new Date()).toISOString()
 
 	for (let code in ipadsData) {
 		options = ipadsData[code]
 		options.aka = options.aka || ''
         options.permalink = `/ipads/iPad-${options.code}/`
+        options.lastmod = lastmod
+        options.description = `iPad ${options.code} - ${options.name}${options.aka ? ' aka ' + options.aka : ''}. 3 Best compatible iPad cases, pens, chargers and keyboards.`.substring(0, 160)
         let template = genTemplate(options)
         let filename = `./ipads/${code}.md`
-        let description = `Official identity of ${options.code} - ${options.name} ${options.aka}. 3 Best compatible iPad cases for ${options.name}. 3 Best compatible iPad pens for ${options.name}. 3 Best compatible iPad chargers for ${options.name}. 3 Best compatible keyboards for ${options.name}.`
         await writeFile(filename, template)
         console.log('wrote', filename)
 
