@@ -21,7 +21,7 @@ const writeFile = (path, data, opts = 'utf8') =>
 function genTemplate (options) {
 	return `---
 layout: page
-title: ${options.code} - ${options.name}
+title: ${options.name} - ${options.code}
 permalink: ${options.permalink}
 model_name: ${options.name}
 description: "${options.description}"
@@ -91,7 +91,7 @@ async function main () {
 	for (let code in ipadsData) {
 		options = ipadsData[code]
 		options.aka = options.aka || ''
-        options.permalink = `/ipads/iPad-${options.code}/`
+        options.permalink = `/ipads/${options.name.replace(' ', '-')}-${options.code}/`
         options.lastmod = lastmod
         options.description = `iPad ${options.code} - ${options.name}${options.aka ? ' aka ' + options.aka : ''}. 3 Best compatible iPad cases, pens, chargers and keyboards.`.substring(0, 160)
         let template = genTemplate(options)
