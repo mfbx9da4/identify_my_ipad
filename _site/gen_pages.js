@@ -31,7 +31,7 @@ code: ${options.code}
 year: ${options.year}
 date: ${options.lastmod}
 sim: ${options.sim || ''}
-keywords: "${options.name}, ${options.code}${options.aka ? ', ' + options.aka : ''}"
+keywords: ${options.keywords}
 ---
 `
 }
@@ -96,7 +96,8 @@ async function main () {
         options.permalink = `/ipads/${options.name.replace(/ /g, '-')}-${options.code}/`
         options.lastmod = lastmod
         options.images_string = JSON.stringify(options.images)
-        options.description = `iPad ${options.code} - ${options.name}${options.aka ? ' aka ' + options.aka : ''}. Best compatible iPad cases, pens, chargers and keyboards.`.substring(0, 160)
+        options.description = `iPad ${options.code} - ${options.name}${options.aka ? ' aka ' + options.aka : ''}. Best compatible iPad cases for ${options.code}`.substring(0, 160)
+        options.keywords = `"iPad, iPad cases, iPad covers, iPad case, iPad cover, ${options.name}, ${options.name} case, ${options.code} case, ${options.code} cover, ${options.code}${options.aka ? ', ' + options.aka : ''}"`
         let template = genTemplate(options)
         let filename = `./ipads/${code}.md`
         await writeFile(filename, template)
