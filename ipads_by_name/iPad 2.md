@@ -1,0 +1,16 @@
+---
+layout: page
+code: A1395, A1396, A1397
+images: ["/assets/images/ipads/identify-ipad-2gen.jpg","/assets/images/ipads/ipad_2_buttons.png"]
+aka: iPad 2nd generation
+year: 2011
+name: iPad 2
+permalink: /ipads/iPad-2/
+date: 2018-06-05T11:23:43.144Z
+model_name: iPad 2
+description: iPad 2 aka iPad 2nd generation. Best compatible iPad cases for iPad 2
+keywords: "iPad, iPad cases, iPad covers, iPad case, iPad cover, iPad 2, iPad 2 case, iPad 2 case, iPad 2 cover, iPad 2, iPad 2nd generation"
+title: iPad 2
+is_model_name_page: true
+sim: true
+---
