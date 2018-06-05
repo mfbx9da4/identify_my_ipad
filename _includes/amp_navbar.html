@@ -1,12 +1,12 @@
 <!-- Start Navbar -->
 <header class="ampstart-headerbar fixed flex justify-start items-center top-0 left-0 right-0 pl2 pr4">
-  <div role="button" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger md-hide lg-hide pr2">☰</div>
+  <div role="button" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger pr2">☰</div>
 
   <a class="my0 mx-auto flex brand" href="/">
     <amp-img src="/assets/images/logo.png" width="20" height="33" layout="fixed" class="my0 mx-auto" alt="Example logo image"></amp-img>&nbsp;&nbsp;&nbsp;<header class="sm-hide xs-hide"><strong>Identify My iPad</strong></header>
   </a>
 
-  <nav class="ampstart-headerbar-nav ampstart-nav xs-hide sm-hide">
+  <nav class="ampstart-headerbar-nav ampstart-nav xs-hide sm-hide hide">
     <ul class="list-reset center m0 p0 flex nowrap">
 
       <li class="ampstart-nav-item ">
@@ -23,7 +23,7 @@
 </header>
 
 <!-- Start Sidebar -->
-<amp-sidebar id="header-sidebar" class="ampstart-sidebar px3 md-hide lg-hide" layout="nodisplay">
+<amp-sidebar id="header-sidebar" class="ampstart-sidebar px3 " layout="nodisplay">
   <div class="flex justify-start items-center ampstart-sidebar-header">
     <div role="button" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger items-start">✕</div>
   </div>
@@ -36,9 +36,26 @@
           <section>
             <header>By Model</header>
             <ul class="ampstart-dropdown-items list-reset m0 p0">
+            {% for my_page in site.pages %}
+              {% if my_page.is_model_code_page %}
+              <li data-model-code="{{ my_page.code }}" class="ampstart-dropdown-item"><a href="{{ my_page.url | prepend: site.baseurl }}" class="text-decoration-none">{{ my_page.code }}</a></li>
+              {% endif %}
+            {% endfor %}
+            </ul>
+          </section>
+        </amp-accordion>
+      </li>
+      <!-- End Dropdown-inline -->
+
+      <!-- Start Dropdown-inline -->
+      <li class="ampstart-nav-item ampstart-nav-dropdown relative">
+        <amp-accordion layout="container" disable-session-states="" class="ampstart-dropdown">
+          <section>
+            <header>By Name</header>
+            <ul class="ampstart-dropdown-items list-reset m0 p0">
         	  {% for my_page in site.pages %}
-        	    {% if my_page.code %}
-        	    <li data-model-code="{{ my_page.code }}" class="ampstart-dropdown-item"><a href="{{ my_page.url | prepend: site.baseurl }}" class="text-decoration-none">{{ my_page.code }}</a></li>
+        	    {% if my_page.is_model_name_page %}
+        	    <li data-model-code="{{ my_page.code }}" class="ampstart-dropdown-item"><a href="{{ my_page.url | prepend: site.baseurl }}" class="text-decoration-none">{{ my_page.model_name }}</a></li>
         	    {% endif %}
         	  {% endfor %}
             </ul>

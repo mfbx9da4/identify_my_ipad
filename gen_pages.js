@@ -19,21 +19,16 @@ const writeFile = (path, data, opts = 'utf8') =>
 
 
 function genTemplate (options) {
-	return `---
-layout: page
-title: ${options.name} - ${options.code}
-permalink: ${options.permalink}
-model_name: ${options.name}
-description: "${options.description}"
-images: ${options.images_string}
-aka: ${options.aka}
-code: ${options.code}
-year: ${options.year}
-date: ${options.lastmod}
-sim: ${options.sim || ''}
-keywords: ${options.keywords}
----
-`
+  let out = '---\n'
+  out += 'layout: page\n'
+  for (let key in options) {
+    let val = options[key]
+    if (val !== null && val !== undefined) {
+      out += `${key}: ${val}\n`
+    }
+  }
+  out += '---\n'
+  return out
 }
 
 
@@ -89,25 +84,57 @@ function defaultSitemapUrls () {
 async function main () {
   let sitemap = defaultSitemapUrls()
   const lastmod = (new Date()).toISOString()
+  const ipadNames = {}
 
 	for (let code in ipadsData) {
 		options = ipadsData[code]
 		options.aka = options.aka || ''
-        options.permalink = `/ipads/${options.name.replace(/ /g, '-')}-${options.code}/`
-        options.lastmod = lastmod
-        options.images_string = JSON.stringify(options.images)
-        options.description = `iPad ${options.code} - ${options.name}${options.aka ? ' aka ' + options.aka : ''}. Best compatible iPad cases for ${options.code}`.substring(0, 160)
-        options.keywords = `"iPad, iPad cases, iPad covers, iPad case, iPad cover, ${options.name}, ${options.name} case, ${options.code} case, ${options.code} cover, ${options.code}${options.aka ? ', ' + options.aka : ''}"`
-        let template = genTemplate(options)
-        let filename = `./ipads/${code}.md`
-        await writeFile(filename, template)
-        console.log('wrote', filename)
+    options.permalink = `/ipads/${options.name.replace(/ /g, '-')}-${options.code}/`
+    options.date = lastmod
+    options.is_model_code_page = true
+    options.model_name = options.name
+    options.images = JSON.stringify(options.images)
+    options.description = `iPad ${options.code} - ${options.name}${options.aka ? ' aka ' + options.aka : ''}. Best compatible iPad cases for ${options.code}`.substring(0, 160)
+    options.keywords = `"iPad, iPad cases, iPad covers, iPad case, iPad cover, ${options.name}, ${options.name} case, ${options.code} case, ${options.code} cover, ${options.code}${options.aka ? ', ' + options.aka : ''}"`
+    options.title = `${options.name} - ${options.code}`
 
-        let priority = 0.9
-        sitemap += buildSitemapUrl(options.permalink, priority, lastmod)
+
+    let template = genTemplate(options)
+    let filename = `./ipads/${code}.md`
+    await writeFile(filename, template)
+    console.log('wrote', filename)
+
+    let existing = ipadNames[options.name]
+    options.is_model_name_page = true
+    delete options.is_model_code_page
+    if (existing) {
+      existing.code = `${existing.code}, ${code}`
+      existing.sim = true
+    } else {
+      ipadNames[options.name] = options
+    }
+
+    let priority = 0.9
+    sitemap += buildSitemapUrl(options.permalink, priority, lastmod)
 	}
 
-    await writeFile('sitemap.xml', buildSitemap(sitemap))
+  for (let name in ipadNames) {
+    options = ipadNames[name]
+    options.title = `${options.name}`
+    options.permalink = `/ipads/${options.name.replace(/ /g, '-')}/`
+    options.description = `${options.name}${options.aka ? ' aka ' + options.aka : ''}. Best compatible iPad cases for ${options.name}`.substring(0, 160)
+    options.keywords = `"iPad, iPad cases, iPad covers, iPad case, iPad cover, ${options.name}, ${options.name} case, ${options.name} case, ${options.name} cover, ${options.name}${options.aka ? ', ' + options.aka : ''}"`
+    let template = genTemplate(options)
+    let filename = `./ipads_by_name/${name}.md`
+    await writeFile(filename, template)
+    console.log('wrote', filename)
+
+    let priority = 0.9
+    sitemap += buildSitemapUrl(options.permalink, priority, lastmod)
+  }
+
+
+  await writeFile('sitemap.xml', buildSitemap(sitemap))
 }
 
 

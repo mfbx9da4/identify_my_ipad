@@ -3,11 +3,21 @@
   <div class="container">
 
     <ul class="list-reset flex flex-wrap">
-      <li><strong>Models&nbsp;</strong></li>
+      <li><strong>By Model&nbsp;</strong></li>
       {% for my_page in site.pages %}
-        {% if my_page.code %} | <li data-model-code="{{ my_page.code }}" class=""><a href="{{ my_page.url | prepend: site.baseurl }}" class="text-decoration-none p1">{{ my_page.code }}</a></li>
+        {% if my_page.is_model_code_page %}
+       	| <li data-model-code="{{ my_page.code }}" class=""><a href="{{ my_page.url | prepend: site.baseurl }}" class="text-decoration-none p1">{{ my_page.code }}</a></li>
 	    {% endif %}
-      {% endfor %}
+      {% endfor %} |
+    </ul>
+
+    <ul class="list-reset flex flex-wrap">
+      <li><strong>By Name&nbsp;</strong></li>
+      {% for my_page in site.pages %}
+        {% if my_page.is_model_name_page %}
+         | <li data-model-code="{{ my_page.code }}" class=""><a href="{{ my_page.url | prepend: site.baseurl }}" class="text-decoration-none p1">{{ my_page.model_name }}</a></li>
+	    {% endif %}
+      {% endfor %} |
     </ul>
 
 	<ul class="ampstart-social-follow list-reset flex justify-around items-center flex-wrap m0 mb4">
