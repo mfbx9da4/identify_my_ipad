@@ -1,170 +1,307 @@
 {
   "A1219": {
     "code": "A1219",
-    "name": "iPad",
-    "aka": "iPad 1"
+    "year": "2010",
+    "images": [
+      "/assets/images/ipads/identify-ipad.jpg"
+    ],
+    "name": "iPad 1",
+    "aka": "iPad 1st generation"
   },
   "A1337": {
     "code": "A1337",
-    "name": "iPad",
-    "aka": "iPad 1",
+    "year": "2010",
+    "images": [
+      "/assets/images/ipads/identify-ipad.jpg"
+    ],
+    "name": "iPad 1",
+    "aka": "iPad 1st generation",
     "sim": true
   },
   "A1395": {
     "code": "A1395",
+    "images": [
+      "/assets/images/ipads/identify-ipad-2gen.jpg",
+      "/assets/images/ipads/ipad_2_buttons.png"
+    ],
+    "aka": "iPad 2nd generation",
+    "year": "2011",
     "name": "iPad 2"
   },
   "A1396": {
     "code": "A1396",
+    "images": [
+      "/assets/images/ipads/identify-ipad-2gen.jpg",
+      "/assets/images/ipads/ipad_2_buttons.png"
+    ],
+    "aka": "iPad 2nd generation",
+    "year": "2011",
     "name": "iPad 2",
     "sim": true
   },
   "A1397": {
     "code": "A1397",
+    "images": [
+      "/assets/images/ipads/identify-ipad-2gen.jpg",
+      "/assets/images/ipads/ipad_2_buttons.png"
+    ],
+    "aka": "iPad 2nd generation",
+    "year": "2011",
     "name": "iPad 2",
     "sim": true
   },
   "A1416": {
     "code": "A1416",
+    "year": "Early 2012",
+    "images": [
+      "/assets/images/ipads/identify-ipad-3gen.jpg"
+    ],
     "name": "iPad 3",
     "aka": "iPad 3rd generation"
   },
   "A1430": {
     "code": "A1430",
+    "year": "Early 2012",
+    "images": [
+      "/assets/images/ipads/identify-ipad-3gen.jpg"
+    ],
     "name": "iPad 3",
     "aka": "iPad 3rd generation",
     "sim": true
   },
   "A1403": {
     "code": "A1403",
+    "year": "Early 2012",
+    "images": [
+      "/assets/images/ipads/identify-ipad-3gen.jpg"
+    ],
     "name": "iPad 3",
     "aka": "iPad 3rd generation",
     "sim": true
   },
   "A1458": {
     "code": "A1458",
+    "images": [
+      "/assets/images/ipads/identify-ipad-4gen.jpg"
+    ],
     "name": "iPad 4",
     "aka": "iPad 4th generation"
   },
   "A1459": {
     "code": "A1459",
+    "images": [
+      "/assets/images/ipads/identify-ipad-4gen.jpg"
+    ],
     "name": "iPad 4",
     "aka": "iPad 4th generation",
     "sim": true
   },
   "A1460": {
     "code": "A1460",
+    "images": [
+      "/assets/images/ipads/identify-ipad-4gen.jpg"
+    ],
     "name": "iPad 4",
     "aka": "iPad 4th generation",
     "sim": true
   },
   "A1432": {
     "code": "A1432",
+    "year": "Late 2012",
     "name": "iPad mini",
+    "images": [
+      "/assets/images/ipads/identify-ipad-mini.jpg"
+    ],
     "aka": "iPad mini 1"
   },
   "A1454": {
     "code": "A1454",
+    "year": "Late 2012",
     "name": "iPad mini",
+    "images": [
+      "/assets/images/ipads/identify-ipad-mini.jpg"
+    ],
     "aka": "iPad mini 1",
     "sim": true
   },
   "A1455": {
     "code": "A1455",
+    "year": "Late 2012",
     "name": "iPad mini",
+    "images": [
+      "/assets/images/ipads/identify-ipad-mini.jpg"
+    ],
     "aka": "iPad mini 1",
     "sim": true
   },
   "A1474": {
     "code": "A1474",
+    "year": "Late 2013, Early 2014",
+    "images": [
+      "/assets/images/ipads/identify-ipad-air.jpg"
+    ],
     "name": "iPad Air",
     "aka": "iPad Air 1"
   },
   "A1475": {
     "code": "A1475",
+    "year": "Late 2013, Early 2014",
+    "images": [
+      "/assets/images/ipads/identify-ipad-air.jpg"
+    ],
     "name": "iPad Air",
     "aka": "iPad Air 1",
     "sim": true
   },
   "A1489": {
     "code": "A1489",
+    "images": [
+      "/assets/images/ipads/identify-ipad-mini2.jpg"
+    ],
+    "year": "Late 2013, Early 2014",
     "name": "iPad mini 2",
     "aka": "iPad mini with Retina Display"
   },
   "A1490": {
     "code": "A1490",
+    "images": [
+      "/assets/images/ipads/identify-ipad-mini2.jpg"
+    ],
+    "year": "Late 2013, Early 2014",
     "name": "iPad mini 2",
     "aka": "iPad mini with Retina Display",
     "sim": true
   },
   "A1566": {
     "code": "A1566",
+    "year": "Late 2014",
+    "images": [
+      "/assets/images/ipads/identify-ipad-air2.jpg"
+    ],
     "name": "iPad Air 2"
   },
   "A1567": {
     "code": "A1567",
+    "year": "Late 2014",
+    "images": [
+      "/assets/images/ipads/identify-ipad-air2.jpg"
+    ],
     "name": "iPad Air 2",
     "sim": true
   },
   "A1599": {
     "code": "A1599",
+    "year": "Late 2014",
+    "images": [
+      "/assets/images/ipads/identify-ipad-mini3.jpg"
+    ],
     "name": "iPad mini 3"
   },
   "A1600": {
     "code": "A1600",
+    "year": "Late 2014",
+    "images": [
+      "/assets/images/ipads/identify-ipad-mini3.jpg"
+    ],
     "name": "iPad mini 3",
     "sim": true
   },
   "A1538": {
     "code": "A1538",
+    "year": "Late 2015",
+    "images": [
+      "/assets/images/ipads/identify-ipad-mini4.jpg"
+    ],
     "name": "iPad mini 4"
   },
   "A1550": {
     "code": "A1550",
+    "year": "Late 2015",
+    "images": [
+      "/assets/images/ipads/identify-ipad-mini4.jpg"
+    ],
     "name": "iPad mini 4",
     "sim": true
   },
   "A1584": {
     "code": "A1584",
+    "year": "2015",
+    "images": [
+      "/assets/images/ipads/identify-ipad-pro.jpg"
+    ],
+    "aka": "iPad Pro 1st generation",
     "name": "iPad Pro 12.9in (2015)"
   },
   "A1652": {
     "code": "A1652",
+    "year": "2015",
+    "images": [
+      "/assets/images/ipads/identify-ipad-pro.jpg"
+    ],
+    "aka": "iPad Pro 1st generation",
     "name": "iPad Pro 12.9in (2015)",
     "sim": true
   },
   "A1673": {
     "code": "A1673",
+    "year": "2016",
+    "images": [
+      "/assets/images/ipads/identify-ipad-pro-9-7.jpg"
+    ],
     "name": "iPad Pro 9.7in (2016)"
   },
   "A1674": {
     "code": "A1674",
+    "year": "2016",
+    "images": [
+      "/assets/images/ipads/identify-ipad-pro-9-7.jpg"
+    ],
     "name": "iPad Pro 9.7in (2016)",
     "sim": true
   },
   "A1675": {
     "code": "A1675",
+    "year": "2016",
+    "images": [
+      "/assets/images/ipads/identify-ipad-pro-9-7.jpg"
+    ],
     "name": "iPad Pro 9.7in (2016)",
     "sim": true
   },
   "A1701": {
     "code": "A1701",
+    "year": "2017",
+    "images": [
+      "/assets/images/ipads/ios11-ipad-pro-10-in.jpg"
+    ],
     "name": "iPad Pro 10.5in (2017)",
     "aka": "iPad Pro 2nd generation"
   },
   "A1709": {
     "code": "A1709",
+    "year": "2017",
+    "images": [
+      "/assets/images/ipads/ios11-ipad-pro-10-in.jpg"
+    ],
     "name": "iPad Pro 10.5in (2017)",
     "aka": "iPad Pro 2nd generation",
     "sim": true
   },
   "A1670": {
     "code": "A1670",
+    "year": "2017",
+    "images": [
+      "/assets/images/ipads/ios11-ipad-pro-12-in.jpg"
+    ],
     "name": "iPad Pro 12.9in (2017)",
     "aka": "iPad Pro 12.9in 2nd generation"
   },
   "A1671": {
     "code": "A1671",
+    "year": "2017",
+    "images": [
+      "/assets/images/ipads/ios11-ipad-pro-12-in.jpg"
+    ],
     "name": "iPad Pro 12.9in (2017)",
     "aka": "iPad Pro 12.9in 2nd generation",
     "sim": true
@@ -172,22 +309,38 @@
   "A1822": {
     "code": "A1822",
     "name": "iPad 9.7in (2017)",
-    "aka": "iPad, iPad 2017 or iPad 5th generation"
+    "year": "2017",
+    "images": [
+      "/assets/images/ipads/ios11-ipad-5gen.jpg"
+    ],
+    "aka": "iPad 2017 or iPad 5th generation"
   },
   "A1823": {
     "code": "A1823",
     "name": "iPad 9.7in (2017)",
-    "aka": "iPad, iPad 2017 or iPad 5th generation",
+    "year": "2017",
+    "images": [
+      "/assets/images/ipads/ios11-ipad-5gen.jpg"
+    ],
+    "aka": "iPad 2017 or iPad 5th generation",
     "sim": true
   },
   "A1893": {
     "code": "A1893",
     "name": "iPad 6",
+    "aka": "iPad 6th generation or iPad 2018",
+    "images": [
+      "/assets/images/ipads/ios11-3-ipad-9-7-in-2018.jpg"
+    ],
     "sim": true
   },
   "A1954": {
     "code": "A1954",
     "name": "iPad 6",
+    "aka": "iPad 6th generation or iPad 2018",
+    "images": [
+      "/assets/images/ipads/ios11-3-ipad-9-7-in-2018.jpg"
+    ],
     "sim": true
   }
 }

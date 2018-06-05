@@ -25,8 +25,10 @@ title: ${options.name} - ${options.code}
 permalink: ${options.permalink}
 model_name: ${options.name}
 description: "${options.description}"
+images: ${options.images_string}
 aka: ${options.aka}
 code: ${options.code}
+year: ${options.year}
 date: ${options.lastmod}
 sim: ${options.sim || ''}
 keywords: "${options.name}, ${options.code}${options.aka ? ', ' + options.aka : ''}"
@@ -91,9 +93,10 @@ async function main () {
 	for (let code in ipadsData) {
 		options = ipadsData[code]
 		options.aka = options.aka || ''
-        options.permalink = `/ipads/${options.name.replace(' ', '-')}-${options.code}/`
+        options.permalink = `/ipads/${options.name.replace(/ /g, '-')}-${options.code}/`
         options.lastmod = lastmod
-        options.description = `iPad ${options.code} - ${options.name}${options.aka ? ' aka ' + options.aka : ''}. 3 Best compatible iPad cases, pens, chargers and keyboards.`.substring(0, 160)
+        options.images_string = JSON.stringify(options.images)
+        options.description = `iPad ${options.code} - ${options.name}${options.aka ? ' aka ' + options.aka : ''}. Best compatible iPad cases, pens, chargers and keyboards.`.substring(0, 160)
         let template = genTemplate(options)
         let filename = `./ipads/${code}.md`
         await writeFile(filename, template)

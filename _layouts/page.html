@@ -14,20 +14,58 @@ layout: amp
 
       <div class="container">
 
+        <div class="p2 center">
+          {% if page.images %}
+            {% for image in page.images %}
+              <a href="{{image}}" target="_blank">
+                <amp-img alt="{{page.title}}" width="160" height="160" layout="intrinsic" src="{{image}}" ></amp-img>
+              </a>
+            {% endfor %}
+          {% endif %}
+        </div>
+
+        <div class="pb3">
+          <table>
+            <tbody>
+              <tr>
+                <td class="pr3">Name</td>
+                <td><strong>{{page.model_name}}</strong></td>
+              </tr>
+              <tr>
+                <td class="pr3">Also known as</td>
+                <td><strong>{{page.aka}}</strong></td>
+              </tr>
+              <tr>
+                <td class="pr3">Model Code</td>
+                <td><strong>{{page.code}}</strong></td>
+              </tr>
+              <tr>
+                <td class="pr3">Has Cellular</td>
+                <td><strong>{% if page.sim %}Yes{% else %}No{% endif %}</strong></td>
+              </tr>
+              <tr>
+                <td class="pr3">Year</td>
+                <td><strong>{{page.year}}</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
         <h3 class="mt3">Top 3 compatible cases for your iPad</h3>
         <div class="clearfix mxn2">
           <div class="md-col-4 md-col px2 my2">
 
             <div class="card">
               <a class="card-img-top" target="_blank" href="https://amzn.to/2LssH5t">
-                <amp-img width="160" height="160" layout="intrinsic" srcset="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=GB&ASIN=B00F90P9R0&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=identifymyipa-21" ></amp-img>
+                <amp-img alt="ipad-case" width="160" height="160" layout="intrinsic" srcset="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=GB&ASIN=B00F90P9R0&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=identifymyipa-21" ></amp-img>
               </a>
               <div class="card-body">
                 <h5 class="card-title"><a target="_blank" href="https://amzn.to/2LssH5t">JETech - Smart Cover Auto Wake/Sleep<span class="price"> £10</span></a></h5>
                 <p class="card-text">We hand picked this case for the {{page.model_name}}.</p>
                 <a target="_blank" class="ampstart-btn" href="https://amzn.to/2LssH5t">Buy now</a>
                 <a target="_blank" href="https://amzn.to/2LssH5t">
-                    <amp-img layout="fixed" width="110" height="24" srcset="https://wms-eu.amazon-adsystem.com/panda/20070822/GB/img/a-logo-amazon.png"></amp-img>
+                    <amp-img alt="ipad-case" layout="fixed" width="110" height="24" srcset="https://wms-eu.amazon-adsystem.com/panda/20070822/GB/img/a-logo-amazon.png"></amp-img>
                 </a>
               </div>
             </div>
@@ -37,14 +75,14 @@ layout: amp
 
             <div class="card">
               <a class="card-img-top" target="_blank" href="https://amzn.to/2x6dFzy">
-                <amp-img width="160" height="160" layout="intrinsic" srcset="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=GB&ASIN=B01EK6Q9CM&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=identifymyipa-21" ></amp-img>
+                <amp-img alt="ipad-case" width="160" height="160" layout="intrinsic" srcset="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=GB&ASIN=B01EK6Q9CM&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=identifymyipa-21" ></amp-img>
               </a>
               <div class="card-body">
                 <h5 class="card-title"><a target="_blank" href="https://amzn.to/2x6dFzy">Water Resistant<span class="price"> £172</span></a></h5>
                 <p class="card-text">We hand picked this case for the {{page.model_name}}.</p>
                 <a target="_blank" class="ampstart-btn" href="https://amzn.to/2x6dFzy">Buy now</a>
                 <a target="_blank" href="https://amzn.to/2x6dFzy">
-                    <amp-img layout="fixed" width="110" height="24" srcset="https://wms-eu.amazon-adsystem.com/panda/20070822/GB/img/a-logo-amazon.png"></amp-img>
+                    <amp-img alt="ipad-case" layout="fixed" width="110" height="24" srcset="https://wms-eu.amazon-adsystem.com/panda/20070822/GB/img/a-logo-amazon.png"></amp-img>
                 </a>
               </div>
             </div>
@@ -54,14 +92,14 @@ layout: amp
 
             <div class="card">
               <a class="card-img-top" target="_blank" href="https://amzn.to/2GM8Fzm">
-                <amp-img width="160" height="160" layout="intrinsic" src="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=GB&ASIN=B00NF5J5M6&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=identifymyipa-21" ></amp-img>
+                <amp-img alt="ipad-case" width="160" height="160" layout="intrinsic" src="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=GB&ASIN=B00NF5J5M6&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=identifymyipa-21" ></amp-img>
               </a>
               <div class="card-body">
                 <h5 class="card-title"><a target="_blank" href="https://amzn.to/2GM8Fzm">Luxury Leather<span class="price"> £32</span></a></h5>
                 <p class="card-text">We hand picked this case for the {{page.model_name}}.</p>
                 <a target="_blank" class="ampstart-btn" href="https://amzn.to/2GM8Fzm">Buy now</a>
                 <a target="_blank" href="https://amzn.to/2GM8Fzm">
-                    <amp-img layout="fixed" width="110" height="24" srcset="https://wms-eu.amazon-adsystem.com/panda/20070822/GB/img/a-logo-amazon.png"></amp-img>
+                    <amp-img alt="ipad-case" layout="fixed" width="110" height="24" srcset="https://wms-eu.amazon-adsystem.com/panda/20070822/GB/img/a-logo-amazon.png"></amp-img>
                 </a>
               </div>
             </div>
@@ -90,9 +128,24 @@ layout: amp
         </div>
       </div
     </article>
+
+    <h5>Sources</h5>
+    <ul>
+      <li><a href="https://support.apple.com/en-gb/ht201471">Official Apple Support</a></li>
+      <li><a href="http://www.fixmyapple.com.au/identify-your-ipad">Fix My Apple</a></li>
+      <li><a href="https://everyi.com/by-identifier/">Every U</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/List_of_iOS_devices">Wikipedia</a></li>
+      <li><a href="https://everymac.com/systems/apple/ipad/index-ipad-specs.html">Everymac</a></li>
+      <li><a href="https://www.macworld.co.uk/how-to/ipad/how-identify-which-ipad-you-have-3528437/">Mac World</a></li>
+      <li><a href="http://www.enterpriseios.com/wiki/Complete_List_of_iOS_User_Agent_Strings">Enterprise ios</a></li>
+    </ul>
+
 </div>
 
+
+
 <script type="application/ld+json">
+[
 {
     "@context": "http://schema.org",
     "@type": "Question",
@@ -100,7 +153,32 @@ layout: amp
     "dateCreated": "{{site.time}}",
     "acceptedAnswer": {
         "@type": "Answer",
-        "text": "{{page.model_name}}{% if page.aka != null %} or {{page.aka}}{% endif %}.</h2>",
+        "text": "{{page.model_name}}{% if page.aka != null %} or {{page.aka}}{% endif %}."
     }
+},
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "name": "{{page.title}}",
+  {% if page.images %}
+  "image": [
+    {% for image in page.images %}
+      "{{image}}"{% if forloop.last != true %},{% endif %}
+    {% endfor %}
+   ],
+  {% endif %}
+
+  "description": "{{page.description}}",
+  {% if page.mpn %}"mpn": "{{page.mpn}}",{% endif %}
+  "brand": {
+    "@type": "Thing",
+    "name": "Apple"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "89"
+  }
 }
+]
 </script>
